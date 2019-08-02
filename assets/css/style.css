@@ -1,0 +1,89 @@
+body {
+    margin: 20px 25% 20px 25%;
+    background-color: rgba(0, 0, 0, 0.952);
+    color: antiquewhite;
+}
+
+#instructions {
+    border: 3px solid black;
+    margin: 10px 0 10px 0;
+    padding: 2px 15px 2px 15px;
+}
+
+#crystals {
+    border: 4px dashed antiquewhite;
+    margin: 10px 0 10px 0;
+    padding: 15px 10% 15px 10%;
+}
+
+#rndm-nmbr {
+    border: 3px solid black;
+    margin: 10px 2px 0px 2px;
+    padding: 15px;
+    width: 20%;
+    height: 100px;
+    float: left;
+}
+
+#total-score {
+    border: 3px solid black;
+    margin: 10px 2px 10px 2px;
+    padding: 2px 15px 2px 15px;
+    width: 25%;
+    float: left;
+}
+
+#score {
+    border: 3px solid black;
+    margin: 10px 0 10px 0;
+    padding: 15px;
+}
+
+#wins-loses {
+    border: 3px solid black;
+    margin: 10px 0px 10px 2px;
+    padding: 15px;
+    width: 27.5%;
+    float: right;
+}
+
+h1 {
+    margin: 20px 25% 20px 25%;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+
+img:hover {
+    opacity: .8;
+}
+
+img:active {
+    opacity: .3;
+}
+
+
+
+button {
+    color: antiquewhite;
+    border: 3px solid antiquewhite;
+    background-color:  rgba(0, 0, 0, 0.952);
+    padding: 2px 15px 2px 15px;
+    font-size: 12pt;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+button:hover {
+    background-color: antiquewhite;
+    color: black;
+    border: 3px solid black;
+}
+
+button:active {
+    opacity: .9;
+}
+
+p {
+    font-size: 16pt;
+}
+

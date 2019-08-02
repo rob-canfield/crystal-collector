@@ -1,54 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystals Collector!</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
+
 <body>
-    <h1>Crystals Collector!</h1>
+    <h1>Crystal Collector!</h1>
 
     <div id="instructions">
-        <p>You will be given a random number at the start of the game.</p>
-    
-        <p>There are four crystals below. By clicking on a crystal you
-            will add a specific amount of points to your total score
+        <p>• You have been assigned a mighty quest, Wizard! </p>
+
+        <p>• There are four crystals below. By clicking on a crystal you
+            will add a specific amount of points to your total score.
         </p>
-    
-        <p>You win the game by matching your total score to the random
-            number. You lose the game if your total score goes above
-            the random number.
+
+        <p>• To succesfully fulfill your quest, you must gather the correct amount of crystals to match the number
+            assigned to you at the beginning of your quest.
+            Gather too many crystals, and your quest will fail.
         </p>
-    
-        <p>Each time when the game starts, the values of each crystal
-            will cahnge.
-        </p>
+
+        <p>• The values of each crystal will change each time you begin a new quest.</p>
     </div>
 
-    <div id="rndm-nmbr"></div>
+    <button id="begin" style="height: 40px">Click to begin your quest!</button>
+
+
+
+
+
+
+
+    <div id="crystals">
+        <img id="redcrystal" src="./assets/images/red.png" alt="RED CRYSTAL" height="150px">
+
+        <img id="bluecrystal" src="./assets/images/blue.png" alt="BLUE CRYSTAL" height="150px">
+
+        <img id="yellowcrystal" src="./assets/images/yellow.png" alt="YELLOW CRYSTAL" height="150px">
+
+        <img id="greencrystal" src="./assets/images/green.png" alt="GREEN CRYSTAL" height="150px">
+    </div>
+
+    <div id="rndm-nmbr">
+
+    </div>
+
+    <div id="total-score">
+        <h3>Your total score is:
+                <div id="score">
+                        45
+                </div>
+        </h3>
+    </div>
+
 
     <div id="wins-loses">
-        <div id="wins"></div>
-        <div id="loses"></div>
-    </div>
-
-    <div id="redcrystal"></div>
-
-    <div id="bluecrystal"></div>
-
-    <div id="yellowcrystal"></div>
-
-    <div id="greencrystal"></div>
-
-    <div id="total-score"><p>Your total score is:</p></div>
-
-    <div id="score">
+        <div id="wins">WINS</div>
+        <div id="loses">LOSSES</div>
     </div>
 
     <script src="assets/javascript/game.js"></script>
-
+    
 
 </body>
+
 </html>
