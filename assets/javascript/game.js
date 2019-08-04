@@ -12,7 +12,6 @@ var blueCrystalNum = Math.floor(Math.random() * 13) + 1;
 var yellowCrystalNum = Math.floor(Math.random() * 13) + 1;
 var greenCrystalNum = Math.floor(Math.random() * 13) + 1;
 
-
     $("#redcrystal").on('click', function () {   
          
         if (redCrystalNum !== blueCrystalNum && redCrystalNum !== yellowCrystalNum && redCrystalNum !== greenCrystalNum){
@@ -55,18 +54,13 @@ var greenCrystalNum = Math.floor(Math.random() * 13) + 1;
         }   
     });
 
-var scoreSum = [0]
-console.log(scoreSum);
+var crystals = []
+var sum = 0
+if (crystals.length > 0){
+    for (i = 0; i < crystals.length; i++)
+}
 
-var sum = scoreSum.reduce((a,b) => {
-    return (a + b);
-});
 
-sum;
-
-console.log(sum);
-
-$("score").append("<h2>" + sum + "</h2>");
 
 
 
