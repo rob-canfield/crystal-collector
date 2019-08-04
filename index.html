@@ -28,6 +28,7 @@
         <p>• The values of each crystal will change each time you begin a new quest.</p>
     </div>
 
+
     <button id="begin" style="height: 40px">Click to begin your quest!</button>
 
 
@@ -38,12 +39,21 @@
 
     <div id="crystals">
         <img id="redcrystal" src="./assets/images/red.png" alt="RED CRYSTAL" height="150px">
+        
 
         <img id="bluecrystal" src="./assets/images/blue.png" alt="BLUE CRYSTAL" height="150px">
+        
 
         <img id="yellowcrystal" src="./assets/images/yellow.png" alt="YELLOW CRYSTAL" height="150px">
+      
 
         <img id="greencrystal" src="./assets/images/green.png" alt="GREEN CRYSTAL" height="150px">
+
+        <div id="redCrystalScore"></div>
+        <div id="blueCrystalScore"></div>
+        <div id="yellowCrystalScore"></div>
+        <div id="greenCrystalScore"></div>
+       
     </div>
 
     <div id="rndm-nmbr">
@@ -52,20 +62,21 @@
 
     <div id="total-score">
         <h3>Your total score is:
-                <div id="score">
-                        45
-                </div>
+            <div id="score">
+                
+            </div>
         </h3>
     </div>
 
 
     <div id="wins-loses">
-        <div id="wins">WINS</div>
-        <div id="loses">LOSSES</div>
+        <div id="wins">WINS: 0</div>
+        <br>
+        <div id="loses">LOSSES: 0</div>
     </div>
 
     <script src="assets/javascript/game.js"></script>
-    
+
 
 </body>
 
