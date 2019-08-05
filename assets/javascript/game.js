@@ -65,12 +65,27 @@ $(".crystal").on('click', function () {
         alert("You're a freaking wizard");
         totalScore = 0
         $("#score").text(totalScore);
+        randomNumber = random();
+        $("#rndm-nmbr").text(randomNumber);
+        redCrystalNum = randomLess();
+        blueCrystalNum = randomLess();
+        yellowCrystalNum = randomLess();
+        greenCrystalNum = randomLess();
+        
+        
     } else if (totalScore > randomNumber) {
         losses++
         $("#losses").text("LOSSES: " + losses);
         alert("try again...")
         totalScore = 0
         $("#score").text(totalScore);
+        randomNumber = random();
+        $("#rndm-nmbr").text(randomNumber);
+        redCrystalNum = randomLess();
+        blueCrystalNum = randomLess();
+        yellowCrystalNum = randomLess();
+        greenCrystalNum = randomLess();
+
     }
 });
 
