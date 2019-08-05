@@ -86,32 +86,3 @@ $(".crystal").on('click', function () {
         greenCrystalNum = randomLess();
     }
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Generate random numbers for each crystal ---> save to var
-
-// Sum crystal vars on click, 
-
-// Check against randomNum, 
-
-// If = display win, 
-
-// If greater than display lose
-
