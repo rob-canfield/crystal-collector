@@ -7,7 +7,6 @@ function randomLess() {
 }
 
 var randomNumber = random();
-console.log(randomNumber);
 $("#rndm-nmbr").text(randomNumber);
 
 var redCrystalNum = randomLess();
@@ -85,7 +84,6 @@ $(".crystal").on('click', function () {
         blueCrystalNum = randomLess();
         yellowCrystalNum = randomLess();
         greenCrystalNum = randomLess();
-
     }
 });
 
