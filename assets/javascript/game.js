@@ -1,85 +1,92 @@
-// Click button ---> Random number generates to begin game.
-
-
-function randomNum() 
-    {randomNum = Math.floor(Math.random() * 120) + 19;
-        console.log(randomNum);
-        $("#rndm-nmbr").append("<h2>" + randomNum + "</h2>");
-    }
-randomNum();
-
-var redCrystalNum = Math.floor(Math.random() * 13) + 1;
-var blueCrystalNum = Math.floor(Math.random() * 13) + 1;
-var yellowCrystalNum = Math.floor(Math.random() * 13) + 1;
-var greenCrystalNum = Math.floor(Math.random() * 13) + 1;
-
-
-function crystalNums() {
-    $("#redcrystal").on('click', function () {   
-         
-        if (redCrystalNum !== blueCrystalNum && redCrystalNum !== yellowCrystalNum && redCrystalNum !== greenCrystalNum){
-            crystals.push(redCrystalNum); 
-            sum = arrsum(crystals)
-        } else {
-            redCrystalNum = Math.floor(Math.random() * 13) + 1;
-        } 
-    });
-
-    $("#bluecrystal").on('click', function () { 
-        if (blueCrystalNum !== redCrystalNum && blueCrystalNum !== yellowCrystalNum && blueCrystalNum !== greenCrystalNum){
-            crystals.push(blueCrystalNum); 
-        } else {
-            blueCrystalNum = Math.floor(Math.random() * 13) + 1;
-        }   
-    });
-
-    $("#yellowcrystal").on('click', function () {
-        if (yellowCrystalNum !== redCrystalNum && yellowCrystalNum !== blueCrystalNum && yellowCrystalNum !== greenCrystalNum){
-            crystals.push(yellowCrystalNum); 
-        } else {
-            yellowCrystalNum = Math.floor(Math.random() * 13) + 1;
-        } 
-    });
-
-    $("#greencrystal").on('click', function () {  
-        if (greenCrystalNum !== redCrystalNum && greenCrystalNum !== blueCrystalNum && greenCrystalNum !== yellowCrystalNum){
-            crystals.push(greenCrystalNum);
-        } else {
-            greenCrystalNum = Math.floor(Math.random() * 13) + 1;
-        }   
-    });
-}
-crystalNums();
-
-var crystals = []
-console.log(crystals);
-
-var sum = 0
-
-function arrsum(arr) {
-    sum = (arr.reduce(function(xs, x) {
-        xs = xs + x
-    }, 0))
+function random() {
+    return Math.floor(Math.random() * 120) + 19;
 }
 
-var totalScore = sum
+function randomLess() {
+    return Math.floor(Math.random() * 13) + 1;
+}
+
+var randomNumber = random();
+console.log(randomNumber);
+$("#rndm-nmbr").text(randomNumber);
+
+var redCrystalNum = randomLess();
+var blueCrystalNum = randomLess();
+var yellowCrystalNum = randomLess();
+var greenCrystalNum = randomLess();
+
+var totalScore = 0
 
 var wins = 0
 var losses = 0
 
-if (totalScore === randomNum){
-    wins++
-    $("#wins").append("WINS: " + wins);
-    randomNum();
-    crystalNums();
-    alert("You're a freaking wizard");
-} else if (totalScore > randomNum){
-    losses++
-    $("#losses").append("LOSSES: " + losses);
-    randomNum();
-    crystalNums();
-    alert("try again...")
-}
+$("#redcrystal").on('click', function () {
+
+    if (redCrystalNum !== blueCrystalNum && redCrystalNum !== yellowCrystalNum && redCrystalNum !== greenCrystalNum) {
+        totalScore = (totalScore += redCrystalNum);
+        $("#score").text(totalScore);
+    } else {
+        redCrystalNum = randomLess();
+    }
+});
+
+$("#bluecrystal").on('click', function () {
+    if (blueCrystalNum !== redCrystalNum && blueCrystalNum !== yellowCrystalNum && blueCrystalNum !== greenCrystalNum) {
+        totalScore = (totalScore += blueCrystalNum);
+        $("#score").text(totalScore);
+    } else {
+        blueCrystalNum = randomLess();
+    }
+});
+
+$("#yellowcrystal").on('click', function () {
+    if (yellowCrystalNum !== redCrystalNum && yellowCrystalNum !== blueCrystalNum && yellowCrystalNum !== greenCrystalNum) {
+        totalScore = (totalScore += yellowCrystalNum);
+        $("#score").text(totalScore);
+    } else {
+        yellowCrystalNum = randomLess();
+    }
+});
+
+$("#greencrystal").on('click', function () {
+    if (greenCrystalNum !== redCrystalNum && greenCrystalNum !== blueCrystalNum && greenCrystalNum !== yellowCrystalNum) {
+        totalScore = (totalScore += greenCrystalNum);
+        $("#score").text(totalScore);
+    } else {
+        greenCrystalNum = randomLess();
+    }
+});
+
+
+$(".crystal").on('click', function () {
+    if (randomNumber === totalScore) {
+        wins++
+        $("#wins").text("WINS: " + wins);
+        alert("You're a freaking wizard");
+        totalScore = 0
+        $("#score").text(totalScore);
+    } else if (totalScore > randomNumber) {
+        losses++
+        $("#losses").text("LOSSES: " + losses);
+        alert("try again...")
+        totalScore = 0
+        $("#score").text(totalScore);
+    }
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
